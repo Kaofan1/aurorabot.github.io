@@ -4,11 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: #e5e7eb;
+            background: #1e293b;
+            padding: 12px 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+            font-weight: bold;
+            border: 1px solid transparent;
+        }
+
+        .btn:hover {
+            background: #2563eb;
+            color: white;
+            transform: translateY(-3px);
+            border-color: #3b82f6;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            opacity: 0.6;
+        }
+    </style>
 </head>
+
 <body>
-  <h1>Home Page</h1>
-  <a href="/aurorabot.github.io/tos.html">Terms of Service</a>
-  <a href="/aurorabot.github.io/privacy.html">Privacy</a>
+    <div class="container">
+        <div class="card">
+            <h1>Home Page</h1>
+            <p>Welcome to the homepage of Aurora Bot</p>
+
+            <div class="links">
+                <a class="btn" href="/aurorabot.github.io/tos.html">Terms of Service</a>
+                <a class="btn" href="/aurorabot.github.io/privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            © 2026 AuroraBot
+        </div>
+    </div>
 </body>
 </html>
