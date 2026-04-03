@@ -6,6 +6,7 @@ const translations = {
         tos: "Terms of Service",
         privacy: "Privacy Policy",
         home: "← Home",
+        lastUpdated: "Last Updated: March 9, 2026",
 
         "f1-title": "⚡ Fast Commands",
         "f1-text": "Lightning-fast response time",
@@ -93,6 +94,7 @@ const translations = {
         tos: "Warunki Korzystania z Usługi",
         privacy: "Polityka prywatności",
         home: "← Strona Główna",
+        lastUpdated: "Ostatnia Aktualizacja: 9 Marca, 2026",
 
         "f1-title": "⚡ Szybkie komendy",
         "f1-text": "Błyskawiczne działanie",
