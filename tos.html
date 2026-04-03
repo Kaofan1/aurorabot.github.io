@@ -14,6 +14,26 @@
             padding: 0;
         }
 
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .lang-btn {
+            background: #1e293b;
+            color: #e5e7eb;
+            border: 1px solid transparent;
+            padding: 8px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .lang-btn:hover {
+            background: #2563eb;
+        }
+
         .container {
             max-width: 900px;
             margin: auto;
@@ -95,72 +115,65 @@
 
 <body>
 
+<div class="lang-switch">
+    <button class="lang-btn" onclick="toggleLanguage()">🌍</button>
+</div>
+
 <div class="container">
     <div class="card">
 
         <div class="top-bar">
-            <h1>Terms of Service</h1>
-            <a class="btn" href="/aurorabot.github.io/index.html">← Home</a>
+            <h1 data-key="tos">Terms of Service</h1>
+            <a class="btn" data-key="home" href="./index.html">← Home</a>
         </div>
 
-        <div class="last-updated">
-            <strong>Last Updated:</strong> March 9, 2026
+        <div class="last-updated" data-key="lastUpdated">
+            Last Updated: March 9, 2026
         </div>
 
-        <h2>1. Introduction</h2>
-        <p>
-        These Terms of Service ("Terms") govern your use of the Aurora Discord Bot ("Aurora", "the Bot").
-        By using Aurora, you agree to these Terms.
-        </p>
+        <h2 data-key="tos-1-title">1. Introduction</h2>
+        <p data-key="tos-1-text1"></p>
+        <p data-key="tos-1-text2"></p>
 
-        <p>
-        If you do not agree, you must not use the Bot.
-        Aurora is an independent service providing features for Discord servers.
-        </p>
-
-        <h2>2. Eligibility</h2>
-        <p>By using Aurora, you confirm that:</p>
+        <h2 data-key="tos-2-title">2. Eligibility</h2>
+        <p data-key="tos-2-text"></p>
         <ul>
-            <li>You follow Discord Terms of Service</li>
-            <li>You have permission to add bots</li>
-            <li>You meet the minimum age requirement</li>
+            <li data-key="tos-2-li1"></li>
+            <li data-key="tos-2-li2"></li>
+            <li data-key="tos-2-li3"></li>
         </ul>
 
-        <h2>3. Use of the Bot</h2>
-        <p>Aurora must be used in compliance with:</p>
+        <h2 data-key="tos-3-title">3. Use of the Bot</h2>
+        <p data-key="tos-3-text1"></p>
         <ul>
-            <li>Discord Terms of Service</li>
-            <li>Discord Community Guidelines</li>
-            <li>These Terms</li>
+            <li data-key="tos-3-li1"></li>
+            <li data-key="tos-3-li2"></li>
+            <li data-key="tos-3-li3"></li>
         </ul>
 
-        <p>You agree NOT to:</p>
+        <p data-key="tos-3-text2"></p>
         <ul>
-            <li>Harass or abuse users</li>
-            <li>Share illegal content</li>
-            <li>Exploit or break the bot</li>
-            <li>Bypass security</li>
-            <li>Spam or automate maliciously</li>
+            <li data-key="tos-3-li4"></li>
+            <li data-key="tos-3-li5"></li>
+            <li data-key="tos-3-li6"></li>
+            <li data-key="tos-3-li7"></li>
+            <li data-key="tos-3-li8"></li>
         </ul>
 
-        <h2>4. Availability</h2>
-        <p>
-        Aurora is provided "as is" with no uptime guarantees.
-        Features may change or be discontinued at any time.
-        </p>
+        <h2 data-key="tos-4-title">4. Availability</h2>
+        <p data-key="tos-4-text"></p>
 
-        <h2>5. Restrictions</h2>
+        <h2 data-key="tos-5-title">5. Restrictions</h2>
         <ul>
-            <li>Reverse engineering is prohibited</li>
-            <li>No unauthorized access attempts</li>
-            <li>No illegal usage</li>
-            <li>No abuse of Discord services</li>
+            <li data-key="tos-5-li1"></li>
+            <li data-key="tos-5-li2"></li>
+            <li data-key="tos-5-li3"></li>
+            <li data-key="tos-5-li4"></li>
         </ul>
+        <p data-key="tos-5-text"></p>
 
-        <p>Violations may result in access restrictions.</p>
-
-        <h2>6. Data Usage</h2>
-        <p>Aurora may process limited data such as:</p>
+        <h2 data-key="tos-6-title">6. Data Usage</h2>
+        <p data-key="tos-6-text"></p>
         <ul>
             <li>User IDs</li>
             <li>Server IDs</li>
@@ -168,29 +181,19 @@
             <li>Command usage</li>
         </ul>
 
-        <p>See Privacy Policy for details.</p>
+        <p data-key="tos-6-text2"></p>
 
-        <h2>7. Limitation of Liability</h2>
-        <p>
-        The developer is not responsible for damages, data loss,
-        or issues caused by use of the Bot.
-        </p>
+        <h2 data-key="tos-7-title">7. Limitation of Liability</h2>
+        <p data-key="tos-7-text"></p>
 
-        <h2>8. Changes to the Terms</h2>
-        <p>
-        These Terms may be updated at any time.
-        Continued use means acceptance of changes.
-        </p>
+        <h2 data-key="tos-8-title">8. Changes to the Terms</h2>
+        <p data-key="tos-8-text"></p>
 
-        <h2>9. Termination</h2>
-        <p>
-        Access may be revoked if misuse is detected.
-        </p>
+        <h2 data-key="tos-9-title">9. Termination</h2>
+        <p data-key="tos-9-text"></p>
 
-        <h2>10. Contact</h2>
-        <p>
-        Contact the developer via Discord for questions.
-        </p>
+        <h2 data-key="tos-10-title">10. Contact</h2>
+        <p data-key="tos-10-text"></p>
 
     </div>
 
@@ -198,6 +201,8 @@
         Aurora Bot © 2026
     </div>
 </div>
+
+<script src="translations.js"></script>
 
 </body>
 </html>
