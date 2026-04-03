@@ -5,19 +5,18 @@ const translations = {
         invite: "Invite Bot",
         tos: "Terms of Service",
         privacy: "Privacy Policy",
-        home: "← Home",
-        lastUpdated: "Last Updated: March 9, 2026",
 
-        features: {
-            f1-title: "⚡ Fast Commands",
-            f1-text: "Lightning-fast response time",
-            f2-title: "🛡️ Moderation",
-            f2-text: "Keep your server safe",
-            f3-title: "🎵 Music",
-            f3-text: "High-quality audio",
-            f4-title: "⚙️ Customization",
-            f4-text: "Fully customizable"
-        }
+        "f1-title": "⚡ Fast Commands",
+        "f1-text": "Lightning-fast response time",
+
+        "f2-title": "🛡️ Moderation",
+        "f2-text": "Keep your server safe",
+
+        "f3-title": "🎵 Music",
+        "f3-text": "High-quality audio",
+
+        "f4-title": "⚙️ Customization",
+        "f4-text": "Fully customizable"
     },
 
     pl: {
@@ -26,40 +25,37 @@ const translations = {
         invite: "Dodaj bota",
         tos: "Regulamin",
         privacy: "Polityka prywatności",
-        home: "← Strona główna",
-        lastUpdated: "Ostatnia aktualizacja: 9 marca 2026",
 
-        features: {
-            f1-title: "⚡ Szybkie komendy",
-            f1-text: "Błyskawiczne działanie",
-            f2-title: "🛡️ Moderacja",
-            f2-text: "Zadbaj o bezpieczeństwo",
-            f3-title: "🎵 Muzyka",
-            f3-text: "Wysoka jakość audio",
-            f4-title: "⚙️ Personalizacja",
-            f4-text: "Pełna konfiguracja"
-        }
+        "f1-title": "⚡ Szybkie komendy",
+        "f1-text": "Błyskawiczne działanie",
+
+        "f2-title": "🛡️ Moderacja",
+        "f2-text": "Zadbaj o bezpieczeństwo",
+
+        "f3-title": "🎵 Muzyka",
+        "f3-text": "Wysoka jakość audio",
+
+        "f4-title": "⚙️ Personalizacja",
+        "f4-text": "Pełna konfiguracja"
     }
 };
 
-// 🔥 automatyczne wykrycie języka
+// reszta BEZ zmian
 function getLanguage() {
     return localStorage.getItem("lang") || (navigator.language.startsWith("pl") ? "pl" : "en");
 }
 
-// 🔥 zmiana języka
 function setLanguage(lang) {
     localStorage.setItem("lang", lang);
     applyTranslations(lang);
 }
 
-// 🔥 toggle
 function toggleLanguage() {
     const newLang = getLanguage() === "en" ? "pl" : "en";
-    setLanguage(newLang);
+    localStorage.setItem("lang", newLang);
+    applyTranslations(newLang);
 }
 
-// 🔥 główna funkcja tłumaczenia
 function applyTranslations(lang) {
     const t = translations[lang];
 
@@ -74,7 +70,6 @@ function applyTranslations(lang) {
     });
 }
 
-// 🔥 init
 document.addEventListener("DOMContentLoaded", () => {
     applyTranslations(getLanguage());
 });
