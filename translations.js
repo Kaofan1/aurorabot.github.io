@@ -23,7 +23,7 @@ const translations = {
         title: "Aurora Bot",
         subtitle: "Nowoczesny bot Discord do ulepszania serwera",
         invite: "Dodaj bota",
-        tos: "Regulamin",
+        tos: "Warunki Korzystania z Usługi",
         privacy: "Polityka prywatności",
 
         "f1-title": "⚡ Szybkie komendy",
