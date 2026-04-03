@@ -14,10 +14,30 @@
             padding: 0;
         }
 
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .lang-btn {
+            background: #1e293b;
+            color: #e5e7eb;
+            border: 1px solid transparent;
+            padding: 8px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .lang-btn:hover {
+            background: #2563eb;
+        }
+
         .container {
             max-width: 1000px;
             margin: auto;
-            padding: 40px 20px;
+            padding: 60px 20px;
             text-align: center;
         }
 
@@ -102,48 +122,109 @@
 
 <body>
 
+<div class="lang-switch">
+    <button class="lang-btn" onclick="toggleLanguage()">PL / EN</button>
+</div>
+
 <div class="container">
 
     <div class="card">
-        <h1>🌌 Aurora Bot</h1>
-        <p>Powerful, modern Discord bot to enhance your server</p>
+        <h1 id="title">🌌 Aurora Bot</h1>
+        <p id="subtitle">Powerful, modern Discord bot to enhance your server</p>
 
         <div class="buttons">
-            <a class="btn primary" href="https://discord.com/oauth2/authorize?client_id=1181572279570800781&permissions=8&integration_type=0&scope=bot">Invite Bot</a>
-            <a class="btn" href="./tos.html">Terms of Service</a>
-            <a class="btn" href="./privacy.html">Privacy Policy</a>
+            <a class="btn primary" id="inviteBtn"
+               href="https://discord.com/oauth2/authorize?client_id=1181572279570800781&permissions=8&integration_type=0&scope=bot">
+               Invite Bot
+            </a>
+
+            <a class="btn" id="tosBtn" href="./tos.html">Terms of Service</a>
+            <a class="btn" id="privacyBtn" href="./privacy.html">Privacy Policy</a>
         </div>
     </div>
 
     <div class="features">
 
         <div class="feature">
-            <h3>⚡ Fast Commands</h3>
-            <p>Lightning-fast response time for all commands.</p>
+            <h3 id="f1-title">⚡ Fast Commands</h3>
+            <p id="f1-text">Lightning-fast response time for all commands.</p>
         </div>
 
         <div class="feature">
-            <h3>🛡️ Moderation</h3>
-            <p>Keep your server safe with powerful moderation tools.</p>
+            <h3 id="f2-title">🛡️ Moderation</h3>
+            <p id="f2-text">Keep your server safe with powerful moderation tools.</p>
         </div>
 
         <div class="feature">
-            <h3>🎵 Music</h3>
-            <p>Play music easily with high-quality audio support.</p>
+            <h3 id="f3-title">🎵 Music</h3>
+            <p id="f3-text">Play music easily with high-quality audio support.</p>
         </div>
 
         <div class="feature">
-            <h3>⚙️ Customization</h3>
-            <p>Configure the bot to perfectly match your server needs.</p>
+            <h3 id="f4-title">⚙️ Customization</h3>
+            <p id="f4-text">Configure the bot to perfectly match your server needs.</p>
         </div>
 
     </div>
 
-    <div class="footer">
+    <div class="footer" id="footer">
         © 2026 AuroraBot
     </div>
 
 </div>
+
+<script>
+    let currentLang = "en";
+
+    function toggleLanguage() {
+        if (currentLang === "en") {
+            currentLang = "pl";
+
+            document.documentElement.lang = "pl";
+
+            document.getElementById("subtitle").innerText = "Nowoczesny bot Discord do ulepszania Twojego serwera";
+
+            document.getElementById("inviteBtn").innerText = "Dodaj bota";
+            document.getElementById("tosBtn").innerText = "Regulamin";
+            document.getElementById("privacyBtn").innerText = "Polityka prywatności";
+
+            document.getElementById("f1-title").innerText = "⚡ Szybkie komendy";
+            document.getElementById("f1-text").innerText = "Błyskawiczna reakcja na wszystkie komendy.";
+
+            document.getElementById("f2-title").innerText = "🛡️ Moderacja";
+            document.getElementById("f2-text").innerText = "Zadbaj o bezpieczeństwo serwera.";
+
+            document.getElementById("f3-title").innerText = "🎵 Muzyka";
+            document.getElementById("f3-text").innerText = "Odtwarzaj muzykę w wysokiej jakości.";
+
+            document.getElementById("f4-title").innerText = "⚙️ Personalizacja";
+            document.getElementById("f4-text").innerText = "Dostosuj bota do swoich potrzeb.";
+
+        } else {
+            currentLang = "en";
+
+            document.documentElement.lang = "en";
+
+            document.getElementById("subtitle").innerText = "Powerful, modern Discord bot to enhance your server";
+
+            document.getElementById("inviteBtn").innerText = "Invite Bot";
+            document.getElementById("tosBtn").innerText = "Terms of Service";
+            document.getElementById("privacyBtn").innerText = "Privacy Policy";
+
+            document.getElementById("f1-title").innerText = "⚡ Fast Commands";
+            document.getElementById("f1-text").innerText = "Lightning-fast response time for all commands.";
+
+            document.getElementById("f2-title").innerText = "🛡️ Moderation";
+            document.getElementById("f2-text").innerText = "Keep your server safe with powerful moderation tools.";
+
+            document.getElementById("f3-title").innerText = "🎵 Music";
+            document.getElementById("f3-text").innerText = "Play music easily with high-quality audio support.";
+
+            document.getElementById("f4-title").innerText = "⚙️ Customization";
+            document.getElementById("f4-text").innerText = "Configure the bot to perfectly match your server needs.";
+        }
+    }
+</script>
 
 </body>
 </html>
