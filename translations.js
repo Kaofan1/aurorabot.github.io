@@ -8,12 +8,16 @@ const translations = {
         home: "← Home",
         lastUpdated: "Last Updated: March 9, 2026",
 
-        features: [
-            ["⚡ Fast Commands", "Lightning-fast response time"],
-            ["🛡️ Moderation", "Keep your server safe"],
-            ["🎵 Music", "High-quality audio"],
-            ["⚙️ Customization", "Fully customizable"]
-        ]
+        features: {
+            f1-title: "⚡ Fast Commands",
+            f1-text: "Lightning-fast response time",
+            f2-title: "🛡️ Moderation",
+            f2-text: "Keep your server safe",
+            f3-title: "🎵 Music",
+            f3-text: "High-quality audio",
+            f4-title: "⚙️ Customization",
+            f4-text: "Fully customizable"
+        }
     },
 
     pl: {
@@ -25,12 +29,16 @@ const translations = {
         home: "← Strona główna",
         lastUpdated: "Ostatnia aktualizacja: 9 marca 2026",
 
-        features: [
-            ["⚡ Szybkie komendy", "Błyskawiczne działanie"],
-            ["🛡️ Moderacja", "Zadbaj o bezpieczeństwo"],
-            ["🎵 Muzyka", "Wysoka jakość audio"],
-            ["⚙️ Personalizacja", "Pełna konfiguracja"]
-        ]
+        features: {
+            f1-title: "⚡ Szybkie komendy",
+            f1-text: "Błyskawiczne działanie",
+            f2-title: "🛡️ Moderacja",
+            f2-text: "Zadbaj o bezpieczeństwo",
+            f3-title: "🎵 Muzyka",
+            f3-text: "Wysoka jakość audio",
+            f4-title: "⚙️ Personalizacja",
+            f4-text: "Pełna konfiguracja"
+        }
     }
 };
 
