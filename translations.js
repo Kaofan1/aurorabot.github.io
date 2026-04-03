@@ -5,6 +5,7 @@ const translations = {
         invite: "Invite Bot",
         tos: "Terms of Service",
         privacy: "Privacy Policy",
+        home: "← Home",
 
         "f1-title": "⚡ Fast Commands",
         "f1-text": "Lightning-fast response time",
@@ -91,6 +92,7 @@ const translations = {
         invite: "Dodaj bota",
         tos: "Warunki Korzystania z Usługi",
         privacy: "Polityka prywatności",
+        home: "← Strona Główna",
 
         "f1-title": "⚡ Szybkie komendy",
         "f1-text": "Błyskawiczne działanie",
