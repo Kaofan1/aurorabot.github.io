@@ -14,22 +14,52 @@
             padding: 0;
         }
 
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .lang-btn {
+            background: #1e293b;
+            color: #e5e7eb;
+            border: 1px solid transparent;
+            padding: 10px 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+
+        .lang-btn:hover {
+            background: #2563eb;
+        }
+
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
 
         .card {
             background: #1e293b;
-            padding: 35px;
+            padding: 40px;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
 
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
         h1 {
             font-size: 40px;
-            margin-bottom: 10px;
+            margin: 0;
         }
 
         h2 {
@@ -53,13 +83,6 @@
             margin-bottom: 8px;
         }
 
-        .top-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
         .btn {
             text-decoration: none;
             color: #e5e7eb;
@@ -69,6 +92,7 @@
             transition: 0.3s;
             border: 1px solid transparent;
             font-size: 14px;
+            white-space: nowrap;
         }
 
         .btn:hover {
@@ -90,99 +114,125 @@
             opacity: 0.7;
             margin-bottom: 25px;
         }
+
+        /* TABLET */
+        @media (max-width: 900px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .card {
+                padding: 30px;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            .lang-switch {
+                top: 10px;
+                right: 10px;
+            }
+
+            .container {
+                padding: 40px 15px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .card {
+                padding: 22px;
+            }
+
+            .top-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            p, li {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
+<div class="lang-switch">
+    <button class="lang-btn" onclick="toggleLanguage()">PL / EN</button>
+</div>
+
 <div class="container">
     <div class="card">
 
         <div class="top-bar">
-            <h1>Privacy Policy</h1>
-            <a class="btn" href="/aurorabot.github.io/index.html">← Home</a>
+            <h1 data-key="privacy"></h1>
+            <a class="btn" data-key="home" href="./index.html"></a>
         </div>
 
-        <div class="last-updated">
-            <strong>Last Updated:</strong> March 9, 2026
-        </div>
+        <div class="last-updated" data-key="lastUpdated"></div>
 
-        <h2>1. Introduction</h2>
-        <p>
-        This Privacy Policy explains how the Aurora Discord Bot ("Aurora", "the Bot") collects,
-        uses, stores, and protects information when users interact with the Bot on Discord.
-        </p>
+        <h2 data-key="pp-1-title"></h2>
+        <p data-key="pp-1-text1"></p>
+        <p data-key="pp-1-text2"></p>
 
-        <p>
-        By using Aurora, you agree to the collection and use of information in accordance with this policy.
-        </p>
-
-        <h2>2. Information We Collect</h2>
-        <p>Aurora may collect:</p>
+        <h2 data-key="pp-2-title"></h2>
+        <p data-key="pp-2-text"></p>
         <ul>
-            <li>Discord User ID</li>
-            <li>Discord Server (Guild) ID</li>
-            <li>Discord Channel ID</li>
-            <li>Command usage data</li>
+            <li data-key="pp-2-li1"></li>
+            <li data-key="pp-2-li2"></li>
+            <li data-key="pp-2-li3"></li>
+            <li data-key="pp-2-li4"></li>
         </ul>
 
-        <p>
-        Aurora does not collect personal data such as names, emails, or passwords.
-        </p>
+        <p data-key="pp-2-text2"></p>
 
-        <h2>3. How Information Is Used</h2>
+        <h2 data-key="pp-3-title"></h2>
         <ul>
-            <li>Providing bot functionality</li>
-            <li>Processing commands</li>
-            <li>Improving performance</li>
-            <li>Preventing abuse</li>
-            <li>Saving server settings</li>
+            <li data-key="pp-3-li1"></li>
+            <li data-key="pp-3-li2"></li>
+            <li data-key="pp-3-li3"></li>
+            <li data-key="pp-3-li4"></li>
         </ul>
 
-        <h2>4. Data Storage</h2>
-        <p>
-        Some data may be stored in databases to ensure proper functionality.
-        This may include IDs and configuration data.
-        </p>
+        <h2 data-key="pp-4-title"></h2>
+        <p data-key="pp-4-text"></p>
 
-        <h2>5. Data Sharing</h2>
-        <p>
-        Aurora does not sell or share user data with third parties.
-        Data may only be disclosed if required by law.
-        </p>
+        <h2 data-key="pp-5-title"></h2>
+        <p data-key="pp-5-text"></p>
 
-        <h2>6. Data Security</h2>
-        <p>
-        Reasonable measures are used to protect data, but no system is 100% secure.
-        </p>
+        <h2 data-key="pp-6-title"></h2>
+        <p data-key="pp-6-text"></p>
 
-        <h2>7. Data Removal</h2>
-        <p>
-        Removing the bot from a server stops data processing.
-        Users may request data deletion where applicable.
-        </p>
+        <h2 data-key="pp-7-title"></h2>
+        <p data-key="pp-7-text"></p>
 
-        <h2>8. Children's Privacy</h2>
-        <p>
-        Aurora is not intended for users below Discord’s minimum age.
-        </p>
+        <h2 data-key="pp-8-title"></h2>
+        <p data-key="pp-8-text"></p>
 
-        <h2>9. Changes to This Policy</h2>
-        <p>
-        This policy may be updated. Continued use means acceptance of changes.
-        </p>
+        <h2 data-key="pp-9-title"></h2>
+        <p data-key="pp-9-text"></p>
 
-        <h2>10. Contact</h2>
-        <p>
-        For questions, contact the developer via Discord.
-        </p>
+        <h2 data-key="pp-10-title"></h2>
+        <p data-key="pp-10-text"></p>
 
     </div>
 
-    <div class="footer">
-        Aurora Bot © 2026
-    </div>
+    <div class="footer" data-key="copyright"></div>
 </div>
+
+<script src="translations.js"></script>
 
 </body>
 </html>
