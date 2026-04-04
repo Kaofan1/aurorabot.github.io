@@ -117,6 +117,38 @@
             font-size: 20px;
         }
 
+        /* STATS */
+        .stats {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: #273449;
+        }
+
+        .stat-card h3 {
+            margin-bottom: 10px;
+            color: #93c5fd;
+        }
+
+        .stat-card p {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 0;
+        }
+
         .footer {
             margin-top: 60px;
             font-size: 14px;
@@ -131,6 +163,10 @@
 
             .features {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -205,6 +241,7 @@
         </div>
     </div>
 
+    <!-- FEATURES -->
     <div class="features">
         <div class="feature">
             <h3 data-key="f1-title"></h3>
@@ -224,6 +261,24 @@
         <div class="feature">
             <h3 data-key="f4-title"></h3>
             <p data-key="f4-text"></p>
+        </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+        <div class="stat-card">
+            <h3>🌐 Servers</h3>
+            <p id="serversCount">120+</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>👥 Users</h3>
+            <p id="usersCount">25,000+</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>⚡ Status</h3>
+            <p id="botStatus">Online</p>
         </div>
     </div>
 
